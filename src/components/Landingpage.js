@@ -6,7 +6,10 @@ const Landingpage = () => {
   return (
     <StyledLandingpage>
       <img src={mainimage} alt="bannerimage" />
-      <h2>Hi, I am </h2>
+      <h2>
+        Hi, I am <span>Yaw Precious</span>
+      </h2>
+      <p>a self-taught Designer and frontend Developer from Ghana</p>
     </StyledLandingpage>
   );
 };
@@ -19,6 +22,11 @@ const StyledLandingpage = styled.div`
   align-items: center;
   img {
     max-width: 35rem;
+  }
+  h2 {
+    span {
+      color: var(--accent-color);
+    }
   }
 `;
 export default Landingpage;
