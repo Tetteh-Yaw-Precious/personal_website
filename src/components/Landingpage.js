@@ -18,7 +18,7 @@ const StyledLandingpage = styled.div`
   justify-content: center;
   align-items: center;
   img {
-    width: 35%;
+    max-width: 35rem;
   }
 `;
 export default Landingpage;
