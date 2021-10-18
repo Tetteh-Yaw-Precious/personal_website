@@ -10,3 +10,7 @@ export const device = {
   tab_land: `(max-width: ${size.tab_land})`,
   big_desktop: `(min-width: ${size.big_desktop})`,
 };
+export const rem = (size, base = 16) => `
+  font-size: ${size}px; // older browsers fallback
+  font-size: calc(${size / base} * 1rem);
+`;
