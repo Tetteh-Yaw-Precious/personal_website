@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import web_dev from "../images/web_dev.svg";
 const ProjectCard = ({ techtype, worktype,projectName,projectCat,techused }) => {
   return (
     <StyledProjectCard>

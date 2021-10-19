@@ -39,7 +39,7 @@ const StyledAbout = styled.div`
     flex-direction: column;
     align-items: flex-start;
     padding-top: 15%;
-    padding-left: 10%;
+    padding-left: 15%;
   }
   .myimage {
     width: 35%;

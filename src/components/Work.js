@@ -21,7 +21,7 @@ const Work = () => {
         />
         <ProjectCard
           techtype={design}
-          worktype={github}
+          worktype={dribbble}
           projectName="veganChops Restaurant"
           projectCat="Branding | Brand Identity"
           techused="PSD | Ai"
@@ -49,7 +49,7 @@ const Work = () => {
         />
         <ProjectCard
           techtype={design}
-          worktype={github}
+          worktype={dribbble}
           projectName="My Portfolio"
           projectCat="UI | UX Design"
           techused="ReactJs"
@@ -61,7 +61,7 @@ const Work = () => {
 const StyledWork = styled.div`
   width: 100%;
   min-height: 100vh;
-  padding: 5%;
+  padding: 5% 15%;
   display: flex;
   flex-direction: column;
   h4 {
