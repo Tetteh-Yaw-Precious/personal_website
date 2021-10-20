@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../helpers/Mixins";
 import Tetteh_Yaw_Precious from "../images/Tetteh_Yaw_Precious.png";
 
 const About = () => {
@@ -33,6 +34,18 @@ const StyledAbout = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #f5f5f5;
+  @media ${device.tab_land} {
+    font-size: 56.25%;
+  }
+  @media ${device.tab_port} {
+    font-size: 50%;
+  }
+  @media ${device.phone} {
+    flex-direction: column-reverse;
+  }
+  @media ${device.big_desktop} {
+    font-size: 75%;
+  }
   .abouttext {
     width: 65%;
     display: flex;
@@ -40,14 +53,26 @@ const StyledAbout = styled.div`
     align-items: flex-start;
     padding-top: 15%;
     padding-left: 15%;
+    @media ${device.phone} {
+      width: 90%;
+      padding-top: 0;
+      padding-left: 10%;
+    }
   }
   .myimage {
     width: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media ${device.phone} {
+      width: 80%;
+      min-height: 5rem;
+    }
     img {
       width: 95%;
+      @media ${device.phone}{
+        width: 100%;
+      }
     }
   }
 `;

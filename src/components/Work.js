@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../helpers/Mixins";
 import ProjectCard from "./ProjectCard";
 import web_dev from "../images/web_dev.svg";
 import github from "../images/githublogo.svg";
@@ -31,14 +32,14 @@ const Work = () => {
           worktype={github}
           projectName="School Registration System"
           projectCat="Web development"
-          techused="html | scss | Javascript | Google Firebase"
+          techused="html | scss | Javascript | Firebase"
         />
         <ProjectCard
           techtype={web_dev}
           worktype={github}
           projectName="Acquva Auctions"
           projectCat="Project Manager"
-          techused="html | scss | Javascript | Google Firebase"
+          techused="html | scss | Javascript | Firebase"
         />
         <ProjectCard
           techtype={web_dev}
@@ -77,6 +78,14 @@ const StyledWork = styled.div`
     grid-template-columns: repeat(3, 35rem);
     grid-template-rows: repeat(2, 25rem);
     gap: 4rem;
+    @media ${device.phone}{
+      display: flex;
+      flex-direction: column;
+      div{
+        width: 30rem;
+        min-height: ;
+      }
+    }
   }
 `;
 

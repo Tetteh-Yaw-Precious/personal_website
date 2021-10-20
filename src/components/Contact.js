@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../helpers/Mixins";
 import ContactSocials from "./ContactSocials";
 import contact_github from "../images/contact_github.svg";
 import contactlinkedin from "../images/contact_linkedin.svg";
@@ -60,6 +61,11 @@ const StyledContact = styled.div`
     width: 100%;
     min-height: 55rem;
     display: flex;
+    @media ${device.phone}{
+      border: 1px solid red;
+      flex-direction: column-reverse
+      ;
+    }
     .socials {
       width: 30%;
       padding-top: 2%;
