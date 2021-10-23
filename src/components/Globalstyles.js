@@ -57,16 +57,24 @@ p{
   font-weight: lighter;
 }
 button{
-  padding: 1rem 6rem;
+  padding: 1rem 0rem;
   margin-top: 1rem;
   background: transparent;
   border: .18rem solid #FE4370;
   cursor: pointer;
   transition: all 0.5s ease;
+  text-decoration: none;
   &:hover{
     color: white;
     background: #FE4370;
   }
+}
+.link{
+  text-decoration: none;
+  padding: 1rem 6rem;
+&:hover{
+  color: white;
+}
 }
 `;
 

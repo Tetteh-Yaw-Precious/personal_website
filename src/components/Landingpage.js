@@ -6,10 +6,9 @@ import mainimage from "../images/mainimage.svg";
 //framer motion
 import { motion } from "framer-motion";
 //importing animation file
-import { nameAnimation,container,fadeIn } from "../animations/Animation";
+import { nameAnimation, container, fadeIn } from "../animations/Animation";
 
 const Landingpage = () => {
-
   return (
     <StyledLandingpage>
       <motion.img
@@ -31,7 +30,11 @@ const Landingpage = () => {
         <motion.p variants={fadeIn}>
           a self-taught Designer and frontend Developer from Ghana
         </motion.p>
-        <motion.button variants={fadeIn}>Work</motion.button>
+        <motion.button variants={fadeIn}>
+          <Link to="/Work" className="link">
+            Work
+          </Link>
+        </motion.button>
       </motion.div>
     </StyledLandingpage>
   );
