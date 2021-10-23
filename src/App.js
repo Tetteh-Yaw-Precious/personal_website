@@ -1,35 +1,43 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Globalstyles from "./components/Globalstyles";
 import Landingpage from "./components/Landingpage";
 import About from "./components/About";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Nav from "./components/Nav";
-
+//animation
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
+  const location = useLocation()
+  console.log(location)
   return (
-    <>
-      <Router>
+   <div className="App">
         <Globalstyles />
         <Nav />
-        <Switch>
-          <Route exact path="/">
-            <Landingpage />
-          </Route>
-          <Route exact path="/About">
-            <About />
-          </Route>
-          <Route exact path="/Work">
-            <Work />
-          </Route>
-          <Route exact path="/ContactUs">
-            <Contact />
-          </Route>
-        </Switch>
-      </Router>
-    </>
+        <AnimatePresence>
+          <Switch>
+            <Route exact path="/">
+              <Landingpage />
+            </Route>
+            <Route exact path="/About">
+              <About />
+            </Route>
+            <Route exact path="/Work">
+              <Work />
+            </Route>
+            <Route exact path="/ContactUs">
+              <Contact />
+            </Route>
+          </Switch>
+        </AnimatePresence>
+   </div>
   );
 };
 

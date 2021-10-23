@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { device } from "../helpers/Mixins";
 import Tetteh_Yaw_Precious from "../images/Tetteh_Yaw_Precious.png";
+//importing Animation
+// import { motion } from "framer-motion";
+// import { pageAnimation } from "../animations/Pageanimation";
 
 const About = () => {
   return (
@@ -70,7 +73,7 @@ const StyledAbout = styled.div`
     }
     img {
       width: 95%;
-      @media ${device.phone}{
+      @media ${device.phone} {
         width: 100%;
       }
     }

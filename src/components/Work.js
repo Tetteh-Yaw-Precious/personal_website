@@ -6,10 +6,13 @@ import web_dev from "../images/web_dev.svg";
 import github from "../images/githublogo.svg";
 import design from "../images/design.svg";
 import dribbble from "../images/dribbble.svg";
+//import Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animations/Pageanimation";
 
 const Work = () => {
   return (
-    <StyledWork>
+    <StyledWork variants={pageAnimation} initial="hidden" animate="show">
       <h4>Work</h4>
       <h1>a couple of my projects so far</h1>
       <div className="projects">
@@ -59,7 +62,7 @@ const Work = () => {
     </StyledWork>
   );
 };
-const StyledWork = styled.div`
+const StyledWork = styled(motion.div)`
   width: 100%;
   min-height: 80vh;
   padding: 1% 15%;
@@ -75,13 +78,13 @@ const StyledWork = styled.div`
   .projects {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 35rem);
-    grid-template-rows: repeat(2, 25rem);
+    grid-template-columns: repeat(3, 30rem);
+    grid-template-rows: repeat(2, 20rem);
     gap: 4rem;
-    @media ${device.phone}{
+    @media ${device.phone} {
       display: flex;
       flex-direction: column;
-      div{
+      div {
         width: 30rem;
       }
     }

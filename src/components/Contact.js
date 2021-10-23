@@ -8,6 +8,9 @@ import contactlinkedin from "../images/contact_linkedin.svg";
 import contact_call from "../images/contact_call.svg";
 import contact_email from "../images/contact_email.svg";
 import copyright from "../images/copyright.svg";
+// //import Animations
+// import { motion } from "framer-motion";
+// import { pageAnimation } from "../animations/Pageanimation";
 
 const Contact = () => {
   return (
