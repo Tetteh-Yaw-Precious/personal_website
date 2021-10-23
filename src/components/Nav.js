@@ -32,6 +32,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   img {
     width: 5%;
   }

@@ -35,7 +35,7 @@ const Contact = () => {
           <input type="text" placeholder="Email" />
           <input type="textarea" placeholder="Enter message" />
           <div className="button_ct">
-            <button>Work</button>
+            <button>Send</button>
           </div>
         </form>
       </div>
@@ -44,9 +44,9 @@ const Contact = () => {
 };
 const StyledContact = styled.div`
   width: 100%;
-  min-height: 100vh;
+  min-height: 30vh;
   background-color: #1b1e32;
-  padding: 5% 15%;
+  padding: 3% 15%;
   display: flex;
   flex-direction: column;
   h4 {

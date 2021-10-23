@@ -1,33 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { rem } from "../helpers/Mixins";
 import mainimage from "../images/mainimage.svg";
 //framer motion
 import { motion } from "framer-motion";
+//importing animation file
+import { nameAnimation,container,fadeIn } from "../animations/Animation";
 
 const Landingpage = () => {
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 2} },
-  };
-  const nameAnimation = {
-    hidden: { opacity: 0, y: 100, position: "absolute" },
-    show: {
-      opacity: 1,
-      y: 0,
-      position: "initial",
-      transition: { duration: 0.5 },
-    },
-  };
-  const container = {
-    hidden: { x: 10 },
-    show: {
-      x: 0,
-      transition: { duration: 0.75, ease: "ease-out" },
-      staggerChildren: 1,
-      when: "afterChildren",
-    },
-  };
+
   return (
     <StyledLandingpage>
       <motion.img
