@@ -61,23 +61,31 @@ const StyledContact = styled.div`
     width: 100%;
     min-height: 55rem;
     display: flex;
-    @media ${device.phone}{
-      border: 1px solid red;
-      flex-direction: column-reverse
-      ;
+    @media ${device.phone} {
+      flex-direction: column-reverse;
+      min-height: 10rem;
     }
     .socials {
       width: 30%;
       padding-top: 2%;
+      @media ${device.phone} {
+        width: 100%;
+      }
       h4 {
-        width: 80%;
+        width: 100%;
         font-weight: 600;
+        @media ${device.phone} {
+          padding: 1rem;
+        }
       }
       .copyright {
         display: flex;
         align-items: flex-end;
         height: 5rem;
         height: 35%;
+        @media ${device.phone} {
+          padding: 2rem 0;
+        }
         .copy-ct {
           display: flex;
           align-items: center;
@@ -101,8 +109,14 @@ const StyledContact = styled.div`
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      @media ${device.phone} {
+        width: 100%;
+      }
       input[type="text"] {
         min-height: 10%;
+        @media ${device.phone} {
+          min-height: 5rem;
+        }
         margin-top: 2rem;
         outline: none;
         padding-left: 0.5rem;
@@ -111,6 +125,9 @@ const StyledContact = styled.div`
         min-height: 45%;
         padding-left: 0.5rem;
         outline: none;
+        @media ${device.phone} {
+          min-height: 25rem;
+        }
       }
       .button_ct {
         display: flex;

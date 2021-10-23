@@ -61,8 +61,8 @@ const Work = () => {
 };
 const StyledWork = styled.div`
   width: 100%;
-  min-height: 100vh;
-  padding: 5% 15%;
+  min-height: 80vh;
+  padding: 1% 15%;
   display: flex;
   flex-direction: column;
   h4 {
@@ -83,7 +83,6 @@ const StyledWork = styled.div`
       flex-direction: column;
       div{
         width: 30rem;
-        min-height: ;
       }
     }
   }
