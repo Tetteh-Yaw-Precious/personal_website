@@ -36,17 +36,17 @@ h1{
   font-weight: 900;
 }
 h2{
-  font-size: ${rem(30)};
+  font-size: ${rem(25)};
   font-weight: 900;
   padding: 0 0 .5rem 0;
 }
 h3{
-  font-size: ${rem(24)};
+  font-size: ${rem(19)};
   color: #757A9B;
   font-weight: 400;
 }
 h4{
-  font-size: ${rem(20)};
+  font-size: ${rem(15)};
   color: #FE4370;
   border-bottom: 2px solid #fe4370;
   padding: 0 2rem 0.5rem 0;

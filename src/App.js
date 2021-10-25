@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Globalstyles from "./components/Globalstyles";
 import Landingpage from "./components/Landingpage";
 import About from "./components/About";
@@ -15,29 +10,29 @@ import Nav from "./components/Nav";
 import { AnimatePresence } from "framer-motion";
 
 const App = () => {
-  const location = useLocation()
-  console.log(location)
+  const location = useLocation();
+  console.log(location);
   return (
-   <div className="App">
-        <Globalstyles />
-        <Nav />
-        <AnimatePresence>
-          <Switch>
-            <Route exact path="/">
-              <Landingpage />
-            </Route>
-            <Route exact path="/About">
-              <About />
-            </Route>
-            <Route exact path="/Work">
-              <Work />
-            </Route>
-            <Route exact path="/ContactUs">
-              <Contact />
-            </Route>
-          </Switch>
-        </AnimatePresence>
-   </div>
+    <div className="App">
+      <Globalstyles />
+      <Nav />
+      <AnimatePresence>
+        <Switch>
+          <Route exact path="/">
+            <Landingpage />
+          </Route>
+          <Route exact path="/About">
+            <About />
+          </Route>
+          <Route exact path="/Work">
+            <Work />
+          </Route>
+          <Route exact path="/ContactUs">
+            <Contact />
+          </Route>
+        </Switch>
+      </AnimatePresence>
+    </div>
   );
 };
 
