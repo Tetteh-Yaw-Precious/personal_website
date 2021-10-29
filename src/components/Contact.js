@@ -9,45 +9,50 @@ import contact_call from "../images/contact_call.svg";
 import contact_email from "../images/contact_email.svg";
 import copyright from "../images/copyright.svg";
 // //import Animations
-// import { motion } from "framer-motion";
-// import { pageAnimation } from "../animations/Pageanimation";
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animations/Pageanimation";
 
 const Contact = () => {
   return (
     <StyledContact>
-      <h4>Work</h4>
-      <h1>get intouch let's work or prolly talk</h1>
-      <div className="contact_ct">
-        <div className="socials">
-          <ContactSocials social={contact_github} socialname="Github" />
-          <ContactSocials social={contactlinkedin} socialname="LinkedIn" />
-          <ContactSocials social={contact_call} socialname="(+233) 552646695" />
-          <ContactSocials
-            social={contact_email}
-            socialname="precioustetteh38@gmail.com"
-          />
-          <div className="copyright">
-            <div className="copy-ct">
-              <img src={copyright} alt="Tetteh Yaw Precious Copyright" />
-              <h4>
-                TETTEH YAW PRECIOUS | <span>2021</span>
-              </h4>
+      <motion.div variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+        <h4>Work</h4>
+        <h1>get intouch let's work or prolly talk</h1>
+        <div className="contact_ct">
+          <div className="socials">
+            <ContactSocials social={contact_github} socialname="Github" />
+            <ContactSocials social={contactlinkedin} socialname="LinkedIn" />
+            <ContactSocials
+              social={contact_call}
+              socialname="(+233) 552646695"
+            />
+            <ContactSocials
+              social={contact_email}
+              socialname="precioustetteh38@gmail.com"
+            />
+            <div className="copyright">
+              <div className="copy-ct">
+                <img src={copyright} alt="Tetteh Yaw Precious Copyright" />
+                <h4>
+                  TETTEH YAW PRECIOUS | <span>2021</span>
+                </h4>
+              </div>
             </div>
           </div>
+          <form className="contactForm">
+            <input type="text" placeholder="Email" />
+            <input type="textarea" placeholder="Enter message" />
+            <div className="button_ct">
+              <button>
+                {" "}
+                <Link to="/Work" className="link">
+                  Send
+                </Link>
+              </button>
+            </div>
+          </form>
         </div>
-        <form className="contactForm">
-          <input type="text" placeholder="Email" />
-          <input type="textarea" placeholder="Enter message" />
-          <div className="button_ct">
-            <button>
-              {" "}
-              <Link to="/Work" className="link">
-                Send
-              </Link>
-            </button>
-          </div>
-        </form>
-      </div>
+      </motion.div>
     </StyledContact>
   );
 };
@@ -58,6 +63,7 @@ const StyledContact = styled.div`
   padding: 3% 15%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   h4 {
     width: 5%;
     padding: 0 0 0 0;

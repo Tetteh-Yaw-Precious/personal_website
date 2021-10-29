@@ -12,62 +12,71 @@ import { pageAnimation } from "../animations/Pageanimation";
 
 const Work = () => {
   return (
-    <StyledWork variants={pageAnimation} initial="hidden" animate="show">
-      <h4>Work</h4>
-      <h1>a couple of my projects so far</h1>
-      <div className="projects">
-        <ProjectCard
-          techtype={web_dev}
-          worktype={github}
-          projectName="GoldYardRecords 1.0"
-          projectCat="Web development"
-          techused="html | css"
-        />
-        <ProjectCard
-          techtype={design}
-          worktype={dribbble}
-          projectName="veganChops Restaurant"
-          projectCat="Branding | Brand Identity"
-          techused="PSD | Ai"
-        />
-        <ProjectCard
-          techtype={web_dev}
-          worktype={github}
-          projectName="School Registration System"
-          projectCat="Web development"
-          techused="html | scss | Javascript | Firebase"
-        />
-        <ProjectCard
-          techtype={web_dev}
-          worktype={github}
-          projectName="Acquva Auctions"
-          projectCat="Project Manager"
-          techused="html | scss | Javascript | Firebase"
-        />
-        <ProjectCard
-          techtype={web_dev}
-          worktype={github}
-          projectName="GoldYardRecords 2.0"
-          projectCat="Web development"
-          techused="html | scss | Javascript "
-        />
-        <ProjectCard
-          techtype={design}
-          worktype={dribbble}
-          projectName="My Portfolio"
-          projectCat="UI | UX Design"
-          techused="ReactJs"
-        />
-      </div>
+    <StyledWork>
+      <motion.div
+        className="workCt"
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
+        <h4>Work</h4>
+        <h1>a couple of my projects so far</h1>
+        <div className="projects">
+          <ProjectCard
+            techtype={web_dev}
+            worktype={github}
+            projectName="GoldYardRecords 1.0"
+            projectCat="Web development"
+            techused="html | css"
+          />
+          <ProjectCard
+            techtype={design}
+            worktype={dribbble}
+            projectName="veganChops Restaurant"
+            projectCat="Branding | Brand Identity"
+            techused="PSD | Ai"
+          />
+          <ProjectCard
+            techtype={web_dev}
+            worktype={github}
+            projectName="School Registration System"
+            projectCat="Web development"
+            techused="html | scss | Javascript | Firebase"
+          />
+          <ProjectCard
+            techtype={web_dev}
+            worktype={github}
+            projectName="Acquva Auctions"
+            projectCat="Project Manager"
+            techused="html | scss | Javascript | Firebase"
+          />
+          <ProjectCard
+            techtype={web_dev}
+            worktype={github}
+            projectName="GoldYardRecords 2.0"
+            projectCat="Web development"
+            techused="html | scss | Javascript "
+          />
+          <ProjectCard
+            techtype={design}
+            worktype={dribbble}
+            projectName="My Portfolio"
+            projectCat="UI | UX Design"
+            techused="ReactJs"
+          />
+        </div>
+      </motion.div>
     </StyledWork>
   );
 };
-const StyledWork = styled(motion.div)`
+const StyledWork = styled.div`
   width: 100%;
   min-height: 80vh;
   padding: 1% 15%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   h4 {
     width: 5%;
     padding: 0 0 0 0;

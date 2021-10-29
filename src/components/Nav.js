@@ -40,7 +40,7 @@ const StyledNav = styled.nav`
     display: flex;
     li {
       list-style: none;
-      padding-left: 8rem;
+      padding-left: 6rem;
       a {
         text-decoration: none;
         font-size: 1.3rem;

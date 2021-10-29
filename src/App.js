@@ -16,8 +16,8 @@ const App = () => {
     <div className="App">
       <Globalstyles />
       <Nav />
-      <AnimatePresence>
-        <Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
           <Route exact path="/">
             <Landingpage />
           </Route>
