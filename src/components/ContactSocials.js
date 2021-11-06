@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 //importing mediaquery manger
 import { device } from "../helpers/Mixins";
-const ContactSocials = ({ social, socialname }) => {
+const ContactSocials = ({ social, socialname, path }) => {
   return (
     <SocialCard>
       <img src={social} alt="Tetteh Yaw Precious github" />
-      <h4>{socialname}</h4>
+      <a href={path} target="_blank" rel="noreferrer">
+        <h4>{socialname}</h4>
+      </a>
     </SocialCard>
   );
 };
@@ -17,19 +19,18 @@ const SocialCard = styled.div`
   min-height: 10%;
   display: flex;
   align-items: center;
-  @media ${device.phone}{
+  @media ${device.phone} {
     width: 100%;
   }
   img {
     padding: 0 1.5rem 0 0;
     width: 10%;
-    @media ${device.phone}{
-    width: 12%;
-  }
-
+    @media ${device.phone} {
+      width: 12%;
+    }
   }
   h4 {
-      width: 100%;
+    width: 100%;
     color: white;
     border-bottom: none;
   }

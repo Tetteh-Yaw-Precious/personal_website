@@ -1,35 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../helpers/Mixins";
 import ContactSocials from "./ContactSocials";
 import contact_github from "../images/contact_github.svg";
 import contactlinkedin from "../images/contact_linkedin.svg";
-import contact_call from "../images/contact_call.svg";
-import contact_email from "../images/contact_email.svg";
 import copyright from "../images/copyright.svg";
 // //import Animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "../animations/Pageanimation";
+import { pageAnimation, titleAnim } from "../animations/Pageanimation";
 
 const Contact = () => {
   return (
     <StyledContact>
-      <motion.div variants={pageAnimation} initial="hidden" animate="show" exit="exit">
-        <h4>Work</h4>
+      <motion.div
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
+        <motion.h4 variants={titleAnim}>Contact</motion.h4>
         <h1>get intouch let's work or prolly talk</h1>
         <div className="contact_ct">
           <div className="socials">
-            <ContactSocials social={contact_github} socialname="Github" />
-            <ContactSocials social={contactlinkedin} socialname="LinkedIn" />
             <ContactSocials
-              social={contact_call}
-              socialname="(+233) 552646695"
+              social={contact_github}
+              socialname="Github"
+              path="https://github.com/Tetteh-Yaw-Precious"
             />
             <ContactSocials
-              social={contact_email}
-              socialname="precioustetteh38@gmail.com"
+              social={contactlinkedin}
+              socialname="LinkedIn"
+              path="https://www.linkedin.com/in/precious-tetteh-431b0418b/"
             />
+            
             <div className="copyright">
               <div className="copy-ct">
                 <img src={copyright} alt="Tetteh Yaw Precious Copyright" />
@@ -40,14 +43,15 @@ const Contact = () => {
             </div>
           </div>
           <form className="contactForm">
-            <input type="text" placeholder="Email" />
-            <input type="textarea" placeholder="Enter message" />
+            <input type="text" placeholder="Email" required />
+            <textarea
+              name="email message"
+              placeholder="Write email"
+              required
+            ></textarea>
             <div className="button_ct">
-              <button>
-                {" "}
-                <Link to="/Work" className="link">
-                  Send
-                </Link>
+              <button type="submit" className="submitBtn">
+                Send
               </button>
             </div>
           </form>
@@ -136,10 +140,13 @@ const StyledContact = styled.div`
         outline: none;
         padding-left: 0.5rem;
       }
-      input[type="textarea"] {
-        min-height: 45%;
+      textarea {
         padding-left: 0.5rem;
+        padding-top: 2rem;
         outline: none;
+        height: 45%;
+        outline: none;
+        resize: none;
         @media ${device.phone} {
           min-height: 25rem;
         }
@@ -147,10 +154,11 @@ const StyledContact = styled.div`
       .button_ct {
         display: flex;
         justify-content: flex-end;
-        button {
-          color: #fe4370;
+        .submitBtn {
+          padding: 1rem 6rem;
+          color: #fe4370 !important;
           &:hover {
-            color: white;
+            color: white !important;
           }
         }
       }

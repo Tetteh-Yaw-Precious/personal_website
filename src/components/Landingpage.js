@@ -6,6 +6,7 @@ import mainimage from "../images/mainimage.svg";
 //import Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animations/Pageanimation";
+import { titleAnim,fade,photoAnim } from "../animations/Pageanimation";
 
 const Landingpage = () => {
   return (
@@ -17,15 +18,15 @@ const Landingpage = () => {
         animate="show"
         exit="exit"
       >
-        <motion.img src={mainimage} alt="bannerimage" />
+        <motion.img src={mainimage} alt="bannerimage" variants={photoAnim}/>
         <motion.div className="description">
-          <motion.h2>
+          <motion.h2 variants={titleAnim}>
             Hi, I am <span>Yaw Precious</span>
           </motion.h2>
-          <motion.p>
+          <motion.p variants={fade}>
             a self-taught Designer and frontend Developer from Ghana
           </motion.p>
-          <motion.button>
+          <motion.button variants={fade}>
             <Link to="/Work" className="link">
               Work
             </Link>

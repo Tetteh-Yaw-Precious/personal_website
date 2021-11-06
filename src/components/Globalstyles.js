@@ -52,9 +52,11 @@ h4{
   padding: 0 2rem 0.5rem 0;
 }
 p{
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 190%;
   font-weight: lighter;
+  color: #3d3d3d;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 button{
   padding: 1rem 0rem;

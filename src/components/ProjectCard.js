@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { titleAnim } from "../animations/Pageanimation";
 const ProjectCard = ({ techtype, worktype,projectName,projectCat,techused }) => {
   return (
-    <StyledProjectCard>
-      <div className="sociallinks">
+    <StyledProjectCard variants={titleAnim}>
+      <motion.div className="sociallinks" variants={titleAnim}>
         <img src={techtype} alt="github profile" />
         <img src={worktype} alt="type of work" />
-      </div>
+      </motion.div>
       <div className="cardInfo">
         <h2>{projectName}</h2>
         <h3>{projectCat}</h3>
@@ -20,7 +22,7 @@ const ProjectCard = ({ techtype, worktype,projectName,projectCat,techused }) => 
     </StyledProjectCard>
   );
 };
-const StyledProjectCard = styled.div`
+const StyledProjectCard = styled(motion.div)`
   border: 1px solid black;
   padding: 4rem 1rem 3rem 3rem;
   display: flex;

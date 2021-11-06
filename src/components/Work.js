@@ -8,7 +8,7 @@ import design from "../images/design.svg";
 import dribbble from "../images/dribbble.svg";
 //import Animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "../animations/Pageanimation";
+import { pageAnimation,titleAnim } from "../animations/Pageanimation";
 
 const Work = () => {
   return (
@@ -20,7 +20,7 @@ const Work = () => {
         animate="show"
         exit="exit"
       >
-        <h4>Work</h4>
+        <motion.h4 variants={titleAnim}>Work</motion.h4>
         <h1>a couple of my projects so far</h1>
         <div className="projects">
           <ProjectCard
@@ -73,7 +73,7 @@ const Work = () => {
 const StyledWork = styled.div`
   width: 100%;
   min-height: 80vh;
-  padding: 1% 15%;
+  padding: 3% 15%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
