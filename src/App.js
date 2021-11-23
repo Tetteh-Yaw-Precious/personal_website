@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, useLocation } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 import Globalstyles from "./components/Globalstyles";
 import Landingpage from "./components/Landingpage";
 import About from "./components/About";
@@ -17,20 +17,10 @@ const App = () => {
       <Globalstyles />
       <Nav />
       <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
-          <Route exact path="/">
             <Landingpage />
-          </Route>
-          <Route exact path="/About">
             <About />
-          </Route>
-          <Route exact path="/Work">
             <Work />
-          </Route>
-          <Route exact path="/ContactUs">
             <Contact />
-          </Route>
-        </Switch>
       </AnimatePresence>
     </div>
   );

@@ -8,14 +8,17 @@ import copyright from "../images/copyright.svg";
 // //import Animations
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animations/Pageanimation";
+import { UseScroll } from "./Usescroll";
 
 const Contact = () => {
+  const [element,controls] = UseScroll();
   return (
     <StyledContact>
       <motion.div
+      ref={element}
         variants={pageAnimation}
         initial="hidden"
-        animate="show"
+        animate={controls}
         exit="exit"
       >
         <motion.h4 variants={titleAnim}>Contact</motion.h4>
@@ -62,7 +65,7 @@ const Contact = () => {
 };
 const StyledContact = styled.div`
   width: 100%;
-  min-height: 30vh;
+  min-height: 100vh;
   background-color: #1b1e32;
   padding: 3% 15%;
   display: flex;

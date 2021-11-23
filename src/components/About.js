@@ -5,15 +5,18 @@ import Tetteh_Yaw_Precious from "../images/Tetteh_Yaw_Precious.png";
 //importing Animation
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animations/Pageanimation";
+import { UseScroll } from "./Usescroll";
 
 const About = () => {
+  const [element,controls] = UseScroll()
   return (
     <StyledAbout>
       <motion.div
+      ref={element}
         className="mainaboutCt"
         variants={pageAnimation}
         intial="hidden"
-        animate="show"
+        animate={controls}
         exit="exit"
       >
         <div className="abouttext">
@@ -41,7 +44,7 @@ const About = () => {
 };
 const StyledAbout = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
