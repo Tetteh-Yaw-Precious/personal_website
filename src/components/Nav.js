@@ -33,6 +33,9 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  position: fixed;
+  background-color: white;
+  z-index: 4;
   img {
     width: 5%;
   }

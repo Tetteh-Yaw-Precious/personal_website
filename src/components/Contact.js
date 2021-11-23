@@ -65,9 +65,10 @@ const Contact = () => {
 };
 const StyledContact = styled.div`
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   background-color: #1b1e32;
-  padding: 3% 15%;
+  padding: 5% 15%;
+  padding-top: 15%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
