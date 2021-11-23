@@ -41,6 +41,6 @@ export const photoAnim={
   show:{
     scale: 1,
     opacity: 1,
-    transition:{ease: "easeOut", duration: 0.75}
+    transition:{ease: "easeOut", duration: 0.6}
   }
 }
