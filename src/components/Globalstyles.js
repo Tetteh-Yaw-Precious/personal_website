@@ -54,7 +54,7 @@ h4{
 p{
   font-size: 1.4rem;
   line-height: 190%;
-  font-weight: lighter;
+  font-weight: 600;
   color: #3d3d3d;
   font-family: 'Source Sans Pro', sans-serif;
 }

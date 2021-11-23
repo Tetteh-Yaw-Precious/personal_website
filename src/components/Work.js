@@ -8,16 +8,19 @@ import design from "../images/design.svg";
 import dribbble from "../images/dribbble.svg";
 //import Animations
 import { motion } from "framer-motion";
-import { pageAnimation,titleAnim } from "../animations/Pageanimation";
+import { pageAnimation, titleAnim } from "../animations/Pageanimation";
+import { UseScroll } from "./Usescroll";
 
 const Work = () => {
+  const [element,controls] = UseScroll();
   return (
     <StyledWork>
       <motion.div
+      ref={element}
         className="workCt"
         variants={pageAnimation}
         initial="hidden"
-        animate="show"
+        animate={controls}
         exit="exit"
       >
         <motion.h4 variants={titleAnim}>Work</motion.h4>
@@ -72,7 +75,7 @@ const Work = () => {
 };
 const StyledWork = styled.div`
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   padding: 3% 15%;
   display: flex;
   flex-direction: column;

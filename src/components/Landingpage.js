@@ -6,19 +6,22 @@ import mainimage from "../images/mainimage.svg";
 //import Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animations/Pageanimation";
-import { titleAnim,fade,photoAnim } from "../animations/Pageanimation";
+import { titleAnim, fade, photoAnim } from "../animations/Pageanimation";
+import { UseScroll } from "./Usescroll";
 
 const Landingpage = () => {
+  const [element, controls] = UseScroll();
   return (
     <StyledLandingpage>
       <motion.div
+        ref={element}
         className="aboutct"
         variants={pageAnimation}
+        animate={controls}
         initial="hidden"
-        animate="show"
         exit="exit"
       >
-        <motion.img src={mainimage} alt="bannerimage" variants={photoAnim}/>
+        <motion.img src={mainimage} alt="bannerimage" variants={photoAnim} />
         <motion.div className="description">
           <motion.h2 variants={titleAnim}>
             Hi, I am <span>Yaw Precious</span>
@@ -38,10 +41,10 @@ const Landingpage = () => {
 };
 
 const StyledLandingpage = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
   .aboutct {
     min-height: 50vh;
     display: flex;
@@ -69,7 +72,7 @@ min-height: 90vh;
       p {
         font-size: ${rem(30)};
         text-align: center;
-        font-weight: lighter;
+        font-weight: 600;
       }
     }
   }
