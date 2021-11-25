@@ -58,6 +58,10 @@ p{
   color: #3d3d3d;
   font-family: 'Source Sans Pro', sans-serif;
 }
+li{
+  font-size: 1.4rem;
+  cursor: pointer;
+}
 button{
   padding: 1rem 0rem;
   margin-top: 1rem;

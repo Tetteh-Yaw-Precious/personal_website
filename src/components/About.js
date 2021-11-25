@@ -10,7 +10,7 @@ import { UseScroll } from "./Usescroll";
 const About = () => {
   const [element,controls] = UseScroll()
   return (
-    <StyledAbout>
+    <StyledAbout id="about">
       <motion.div
       ref={element}
         className="mainaboutCt"

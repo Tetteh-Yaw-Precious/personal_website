@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import {Link} from "react-scroll";
 
 import mainlogo from "../images/websitelogo.png";
 
@@ -9,18 +9,10 @@ const Nav = () => {
     <StyledNav>
       <img src={mainlogo} alt="mylogo" />
       <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/Work">Work</Link>
-        </li>
-        <li>
-          <Link to="/About">About</Link>
-        </li>
-        <li>
-          <Link to="/ContactUs">Contact</Link>
-        </li>
+        <li><Link activeClass="active" to="home" spy={true} smooth={true}>Home</Link></li>
+        <li><Link  to="about" spy={true} smooth={true}>About</Link></li>
+        <li><Link  to="work" spy={true} smooth={true}>Work</Link></li>
+        <li><Link  to="contact" spy={true} smooth={true}>Contact</Link></li>
       </ul>
     </StyledNav>
   );
@@ -34,6 +26,7 @@ const StyledNav = styled.nav`
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   position: fixed;
+  top: 0;
   background-color: white;
   z-index: 4;
   img {

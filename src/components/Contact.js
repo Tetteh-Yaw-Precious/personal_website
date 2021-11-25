@@ -11,11 +11,11 @@ import { pageAnimation, titleAnim } from "../animations/Pageanimation";
 import { UseScroll } from "./Usescroll";
 
 const Contact = () => {
-  const [element,controls] = UseScroll();
+  const [element, controls] = UseScroll();
   return (
-    <StyledContact>
+    <StyledContact id="contact">
       <motion.div
-      ref={element}
+        ref={element}
         variants={pageAnimation}
         initial="hidden"
         animate={controls}
@@ -35,7 +35,7 @@ const Contact = () => {
               socialname="LinkedIn"
               path="https://www.linkedin.com/in/precious-tetteh-431b0418b/"
             />
-            
+
             <div className="copyright">
               <div className="copy-ct">
                 <img src={copyright} alt="Tetteh Yaw Precious Copyright" />
@@ -65,12 +65,12 @@ const Contact = () => {
 };
 const StyledContact = styled.div`
   width: 100%;
-  min-height: 70vh;
+  min-height: 100vh;
   background-color: #1b1e32;
-  padding: 5% 15%;
-  padding-top: 15%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
   overflow: hidden;
   h4 {
     width: 5%;
@@ -82,7 +82,7 @@ const StyledContact = styled.div`
   }
   .contact_ct {
     width: 100%;
-    min-height: 55rem;
+    min-height: 50rem;
     display: flex;
     @media ${device.phone} {
       flex-direction: column-reverse;
