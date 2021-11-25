@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import { rem } from "../helpers/Mixins";
 import mainimage from "../images/mainimage.svg";
@@ -12,7 +12,7 @@ import { UseScroll } from "./Usescroll";
 const Landingpage = () => {
   const [element, controls] = UseScroll();
   return (
-    <StyledLandingpage>
+    <StyledLandingpage id="home">
       <motion.div
         ref={element}
         className="aboutct"
@@ -30,7 +30,7 @@ const Landingpage = () => {
             a self-taught Designer and frontend Developer from Ghana
           </motion.p>
           <motion.button variants={fade}>
-            <Link to="/Work" className="link">
+            <Link to="work" spy={true} smooth={true} className="link">
               Work
             </Link>
           </motion.button>
@@ -44,7 +44,8 @@ const StyledLandingpage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 100vh;
+
   .aboutct {
     min-height: 50vh;
     display: flex;

@@ -14,7 +14,7 @@ import { UseScroll } from "./Usescroll";
 const Work = () => {
   const [element,controls] = UseScroll();
   return (
-    <StyledWork>
+    <StyledWork id="work">
       <motion.div
       ref={element}
         className="workCt"
@@ -76,8 +76,9 @@ const Work = () => {
 const StyledWork = styled.div`
   width: 100%;
   min-height: 100vh;
-  padding: 3% 15%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   overflow: hidden;
   h4 {
