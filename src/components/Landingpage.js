@@ -1,18 +1,20 @@
-import React from "react";
+import {React} from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
-import { rem } from "../helpers/Mixins";
+import { device, rem } from "../helpers/Mixins";
 import mainimage from "../images/mainimage.svg";
 //import Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animations/Pageanimation";
 import { titleAnim, fade, photoAnim } from "../animations/Pageanimation";
 import { UseScroll } from "./Usescroll";
+import openicon from "../images/openicon.svg";
 
-const Landingpage = () => {
+const Landingpage = ({navStatus,setnavStatus}) => {
   const [element, controls] = UseScroll();
   return (
     <StyledLandingpage id="home">
+      <img src={openicon} alt="open icon" className="openicon" onClick={()=>{setnavStatus(!navStatus)}}/>
       <motion.div
         ref={element}
         className="aboutct"
@@ -30,7 +32,7 @@ const Landingpage = () => {
             a self-taught Designer and frontend Developer from Ghana
           </motion.p>
           <motion.button variants={fade}>
-            <Link to="work" spy={true} smooth={true} className="link">
+            <Link to="worky" spy={true} smooth={true} className="link">
               Work
             </Link>
           </motion.button>
@@ -45,7 +47,6 @@ const StyledLandingpage = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-
   .aboutct {
     min-height: 50vh;
     display: flex;
@@ -75,6 +76,17 @@ const StyledLandingpage = styled.div`
         text-align: center;
         font-weight: 600;
       }
+    }
+  }
+  .openicon {
+    display: none;
+    @media ${device.phone}{
+      display: flex;
+      position: fixed;
+      top: 10rem;
+      right: 5rem;
+      width: 10%;
+      z-index: 10;
     }
   }
 `;

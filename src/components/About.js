@@ -8,11 +8,11 @@ import { pageAnimation } from "../animations/Pageanimation";
 import { UseScroll } from "./Usescroll";
 
 const About = () => {
-  const [element,controls] = UseScroll()
+  const [element, controls] = UseScroll();
   return (
     <StyledAbout id="about">
       <motion.div
-      ref={element}
+        ref={element}
         className="mainaboutCt"
         variants={pageAnimation}
         intial="hidden"
@@ -64,6 +64,9 @@ const StyledAbout = styled.div`
   }
   .mainaboutCt {
     display: flex;
+    @media ${device.phone} {
+      flex-direction: column-reverse;
+    }
     .abouttext {
       width: 65%;
       display: flex;
@@ -90,6 +93,7 @@ const StyledAbout = styled.div`
         width: 95%;
         @media ${device.phone} {
           width: 100%;
+          padding-left: 10%;
         }
       }
     }
