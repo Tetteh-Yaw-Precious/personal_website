@@ -13,7 +13,7 @@ import { UseScroll } from "./Usescroll";
 const Contact = () => {
   const [element, controls] = UseScroll();
   return (
-    <StyledContact id="contact">
+    <StyledContact id="contacty">
       <motion.div
         ref={element}
         variants={pageAnimation}
@@ -71,6 +71,7 @@ const StyledContact = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 10%;
+  padding-top: 10%;
   overflow: hidden;
   h4 {
     width: 5%;

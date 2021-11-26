@@ -11,10 +11,11 @@ import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animations/Pageanimation";
 import { UseScroll } from "./Usescroll";
 
+
 const Work = () => {
   const [element,controls] = UseScroll();
   return (
-    <StyledWork id="work">
+    <StyledWork id="worky">
       <motion.div
       ref={element}
         className="workCt"
@@ -81,6 +82,9 @@ const StyledWork = styled.div`
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  @media ${device.phone}{
+    padding: 6% 0;
+  }
   h4 {
     width: 5%;
     padding: 0 0 0 0;
