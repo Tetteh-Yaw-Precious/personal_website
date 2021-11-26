@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { useLocation } from "react-router";
 import mainlogo from "../images/websitelogo.png";
-import closeicon from "../images/closeicon.svg";
 import { device } from "../helpers/Mixins";
 const NavNew = ({ navStatus, setnavStatus }) => {
   const pathname = useLocation();
