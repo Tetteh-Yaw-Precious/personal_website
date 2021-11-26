@@ -13,7 +13,7 @@ import { UseScroll } from "./Usescroll";
 const Contact = () => {
   const [element, controls] = UseScroll();
   return (
-    <StyledContact id="contact">
+    <StyledContact id="contacty">
       <motion.div
         ref={element}
         variants={pageAnimation}
@@ -65,7 +65,7 @@ const Contact = () => {
 };
 const StyledContact = styled.div`
   width: 100%;
-  min-height: 19vh;
+  min-height: 100vh;
   background-color: #1b1e32;
   display: flex;
   flex-direction: column;

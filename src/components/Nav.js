@@ -1,22 +1,46 @@
 import React from "react";
 import styled from "styled-components";
-import {Link} from "react-scroll";
-
+import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 import mainlogo from "../images/websitelogo.png";
+
 
 const Nav = () => {
   return (
     <StyledNav>
       <img src={mainlogo} alt="mylogo" />
       <ul>
-        <li><Link activeClass="active" to="home" spy={true} smooth={true}>Home</Link></li>
-        <li><Link  to="about" spy={true} smooth={true}>About</Link></li>
-        <li><Link  to="work" spy={true} smooth={true}>Work</Link></li>
-        <li><Link  to="contact" spy={true} smooth={true}>Contact</Link></li>
+        <li>
+          <Link activeClass="active" to="home" spy={true} smooth={true}>
+            Home
+          </Link>
+          <Line />
+        </li>
+        <li>
+          <Link to="about" spy={true} smooth={true}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="work" spy={true} smooth={true}>
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" spy={true} smooth={true}>
+            Contact
+          </Link>
+        </li>
       </ul>
     </StyledNav>
   );
 };
+const Line = styled(motion.div)`
+  height: 0.3rem;
+  width: 5%;
+  position: absolute;
+  background: green;
+`;
 const StyledNav = styled.nav`
   width: 100%;
   min-height: 5vh;
@@ -44,5 +68,6 @@ const StyledNav = styled.nav`
       }
     }
   }
+
 `;
 export default Nav;

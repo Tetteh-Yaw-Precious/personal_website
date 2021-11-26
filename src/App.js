@@ -5,7 +5,8 @@ import Landingpage from "./components/Landingpage";
 import About from "./components/About";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
+import NavNew from "./components/NavNew";
 //animation
 import { AnimatePresence } from "framer-motion";
 
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <div className="App">
       <Globalstyles />
-      <Nav />
+      <NavNew />
       <AnimatePresence exitBeforeEnter>
             <Landingpage />
             <About />
