@@ -23,7 +23,7 @@ const About = () => {
           <h4>About</h4>
           <h1>Here is something little about me </h1>
           <p>
-            Hello! My name is Tetteh Yaw Precious, 22 years old of age, I love
+            Hello! My name is Tetteh Yaw Precious, I love
             to design and work on digital products. Me being introduced closely
             to the tech industry during a three-week boot camp in 2019, gave me
             the urge to know more and add to what I have been introduced to as a
