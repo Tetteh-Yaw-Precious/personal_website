@@ -64,7 +64,7 @@ const StyledLandingpage = styled.div`
       align-items: center;
       h2 {
         font-size: ${rem(42)};
-        font-weight: 500;
+        font-weight: 600;
         span {
           font-size: ${rem(50)};
           color: var(--accent-color);
@@ -74,7 +74,7 @@ const StyledLandingpage = styled.div`
       p {
         font-size: ${rem(30)};
         text-align: center;
-        font-weight: 600;
+        font-weight: 500;
       }
     }
   }
