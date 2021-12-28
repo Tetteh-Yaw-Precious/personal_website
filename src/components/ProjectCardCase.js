@@ -12,7 +12,7 @@ const ProjectCardCase = ({
   path,
   repolink,
   gitRepo,
-  weblink
+  weblink,
 }) => {
   return (
     <StyledProjectCard variants={titleAnim}>
@@ -72,6 +72,9 @@ const StyledProjectCard = styled(motion.div)`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    p {
+      font-size: 1rem;
+    }
   }
   .techused {
     align-items: flex-end;
