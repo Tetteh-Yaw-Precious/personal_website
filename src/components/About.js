@@ -23,16 +23,15 @@ const About = () => {
           <h4>About</h4>
           <h1>Here is something little about me </h1>
           <p>
-            Hello! My name is Tetteh Yaw Precious, I love
-            to design and work on digital products. Me being introduced closely
-            to the tech industry during a three-week boot camp in 2019, gave me
-            the urge to know more and add to what I have been introduced to as a
-            lifelong learner built and developed my interest in Web development,
-            Graphic Design, User Interface Design, and IoT. Since then I’ve
-            worked par-time and freelance as Graphic Designer, Brand Identity
-            Designer, UI/UX designer and frontend Developer on teams to working
-            on various projects. Below are a few technologies and tools I’ve
-            worked with recently:
+            Hello! My name is Tetteh Yaw Precious, I love to design and work on
+            digital products. Me being introduced closely to the tech industry
+            during a three-week boot camp in 2019, gave me the urge to know more
+            and add to what I have been introduced to as a lifelong learner
+            built and developed my interest in Web development, Graphic Design,
+            User Interface Design, and IoT. Since then I’ve worked par-time and
+            freelance as Graphic Designer, Brand Identity Designer, UI/UX
+            designer and frontend Developer on teams to working on various
+            projects.
           </p>
         </div>
         <div className="myimage">

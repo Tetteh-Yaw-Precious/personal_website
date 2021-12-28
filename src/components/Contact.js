@@ -45,10 +45,14 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <form className="contactForm">
-            <input type="text" placeholder="Email" required />
+          <form
+            className="contactForm"
+            action="https://formspree.io/f/xjvlkyrl"
+            method="POST"
+          >
+            <input type="text" placeholder="Email" name="Email" required />
             <textarea
-              name="email message"
+              name="Message"
               placeholder="Write email"
               required
             ></textarea>
