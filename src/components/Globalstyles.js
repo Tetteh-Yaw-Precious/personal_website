@@ -33,7 +33,8 @@ body{
 }
 h1{
   font-size: ${rem(42)};
-  font-weight: 900;
+  font-weight: bolder;
+  font-family: "Source Sans Pro", sans-serif;
 }
 h2{
   font-size: ${rem(25)};
