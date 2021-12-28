@@ -41,10 +41,16 @@ const ProjectCardCase = ({
   );
 };
 const StyledProjectCard = styled(motion.div)`
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   padding: 4rem 1rem 3rem 3rem;
   display: flex;
   flex-direction: column;
+  &:hover {
+    border: none;
+    box-shadow: rgba(27, 30, 50, 0.1) 0px 3px 12px;
+    background: white;
+    transform: translateY(-100px);
+  }
 
   .sociallinks {
     display: flex;
