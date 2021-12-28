@@ -1,4 +1,4 @@
-import {React} from "react";
+import { React } from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 import { device, rem } from "../helpers/Mixins";
@@ -10,11 +10,18 @@ import { titleAnim, fade, photoAnim } from "../animations/Pageanimation";
 import { UseScroll } from "./Usescroll";
 import openicon from "../images/openicon.svg";
 
-const Landingpage = ({navStatus,setnavStatus}) => {
+const Landingpage = ({ navStatus, setnavStatus }) => {
   const [element, controls] = UseScroll();
   return (
     <StyledLandingpage id="home">
-      <img src={openicon} alt="open icon" className="openicon" onClick={()=>{setnavStatus(!navStatus)}}/>
+      <img
+        src={openicon}
+        alt="open icon"
+        className="openicon"
+        onClick={() => {
+          setnavStatus(!navStatus);
+        }}
+      />
       <motion.div
         ref={element}
         className="aboutct"
@@ -29,11 +36,11 @@ const Landingpage = ({navStatus,setnavStatus}) => {
             Hi, I am <span>Yaw Precious</span>
           </motion.h2>
           <motion.p variants={fade}>
-            a self-taught Designer and frontend Developer from Ghana
+            a self-taught frontend Engineer from Ghana
           </motion.p>
           <motion.button variants={fade}>
             <Link to="worky" spy={true} smooth={true} className="link">
-              Work
+              work
             </Link>
           </motion.button>
         </motion.div>
@@ -80,7 +87,7 @@ const StyledLandingpage = styled.div`
   }
   .openicon {
     display: none;
-    @media ${device.phone}{
+    @media ${device.phone} {
       display: flex;
       position: fixed;
       top: 10rem;

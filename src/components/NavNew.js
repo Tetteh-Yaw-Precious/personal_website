@@ -50,12 +50,11 @@ const Line = styled(motion.div)`
   width: 0%;
   position: absolute;
   bottom: -80%;
-  background: green;
 `;
 const StyledNav = styled.nav`
   .navbar {
     position: fixed;
-    min-height: 10vh;
+    min-height: 5vh;
     width: 100%;
     display: flex;
     margin: auto;

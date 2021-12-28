@@ -59,7 +59,7 @@ p{
   font-family: 'Source Sans Pro', sans-serif;
 }
 li{
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 button{

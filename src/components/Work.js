@@ -2,22 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { device } from "../helpers/Mixins";
 import ProjectCard from "./ProjectCard";
+import ProjectCardCase from "./ProjectCardCase";
 import web_dev from "../images/web_dev.svg";
 import github from "../images/githublogo.svg";
-import design from "../images/design.svg";
-import dribbble from "../images/dribbble.svg";
+import behance from "../images/behance.svg";
+import code from "../images/code.svg";
 //import Animations
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animations/Pageanimation";
 import { UseScroll } from "./Usescroll";
 
-
 const Work = () => {
-  const [element,controls] = UseScroll();
+  const [element, controls] = UseScroll();
   return (
     <StyledWork id="worky">
       <motion.div
-      ref={element}
+        ref={element}
         className="workCt"
         variants={pageAnimation}
         initial="hidden"
@@ -28,25 +28,33 @@ const Work = () => {
         <h1>a couple of my projects so far</h1>
         <div className="projects">
           <ProjectCard
-            techtype={web_dev}
-            worktype={github}
-            projectName="GoldYardRecords 1.0"
-            projectCat="Web development"
-            techused="html | css"
-          />
-          <ProjectCard
-            techtype={design}
-            worktype={dribbble}
-            projectName="veganChops Restaurant"
-            projectCat="Branding | Brand Identity"
-            techused="PSD | Ai"
-          />
-          <ProjectCard
-            techtype={web_dev}
+            techtype={code}
             worktype={github}
             projectName="School Registration System"
             projectCat="Web development"
             techused="html | scss | Javascript | Firebase"
+          />
+          <ProjectCard
+            techtype={code}
+            worktype={github}
+            projectName="GoldYardRecords 1.0"
+            projectCat="A record label web design case study"
+            techused="html | css"
+          />
+
+          <ProjectCardCase
+            gitRepo={github}
+            worktype={code}
+            designtype={behance}
+            path={
+              "https://www.behance.net/gallery/133984395/GoldYardRecord-Web-Design-Case-Study"
+            }
+            repolink={
+              "https://github.com/Tetteh-Yaw-Precious/GoldYardRecordsUpgrade-master"
+            }
+            projectName="GoldYardRecords 2.0"
+            projectCat="Web development"
+            techused="html | scss | Javascript "
           />
           <ProjectCard
             techtype={web_dev}
@@ -54,20 +62,6 @@ const Work = () => {
             projectName="Acquva Auctions"
             projectCat="Project Manager"
             techused="html | scss | Javascript | Firebase"
-          />
-          <ProjectCard
-            techtype={web_dev}
-            worktype={github}
-            projectName="GoldYardRecords 2.0"
-            projectCat="Web development"
-            techused="html | scss | Javascript "
-          />
-          <ProjectCard
-            techtype={design}
-            worktype={dribbble}
-            projectName="My Portfolio"
-            projectCat="UI | UX Design"
-            techused="ReactJs"
           />
         </div>
       </motion.div>
@@ -82,7 +76,7 @@ const StyledWork = styled.div`
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  @media ${device.phone}{
+  @media ${device.phone} {
     padding: 6% 0;
   }
   h4 {
