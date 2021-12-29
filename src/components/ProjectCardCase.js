@@ -2,19 +2,30 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { titleAnim } from "../animations/Pageanimation";
-const ProjectCard = ({
+const ProjectCardCase = ({
   techtype,
   worktype,
   projectName,
   projectCat,
   techused,
-  designtype
+  designtype,
+  path,
+  repolink,
+  gitRepo,
 }) => {
   return (
     <StyledProjectCard variants={titleAnim}>
       <motion.div className="sociallinks" variants={titleAnim}>
-        <img src={techtype} alt="github profile" />
-        <img src={worktype} alt="type of work" />
+        <a href={null} target="_blank" rel="noreferrer">
+          <img src={worktype} alt="type of work" />
+        </a>
+        <a href={repolink} target="_blank" rel="noreferrer">
+          <img src={gitRepo} alt="github profile" />
+        </a>
+
+        <a href={path} target="_blank" rel="noreferrer">
+          <img src={designtype} alt="case study" />
+        </a>
       </motion.div>
       <div className="cardInfo">
         <h2>{projectName}</h2>
@@ -30,17 +41,27 @@ const ProjectCard = ({
   );
 };
 const StyledProjectCard = styled(motion.div)`
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   padding: 4rem 1rem 3rem 3rem;
   display: flex;
   flex-direction: column;
+  &:hover {
+    border: none;
+    box-shadow: rgba(27, 30, 50, 0.1) 0px 3px 12px;
+    background: white;
+    transform: translateY(-100px);
+  }
+
   .sociallinks {
     display: flex;
     gap: 1rem;
     padding: 0 0 2rem 0;
-    img {
-      width: 6%;
-      cursor: pointer;
+
+    a {
+      img {
+        width: 90%;
+        cursor: pointer;
+      }
     }
   }
   .cardInfo {
@@ -64,4 +85,4 @@ const StyledProjectCard = styled(motion.div)`
     display: flex;
   }
 `;
-export default ProjectCard;
+export default ProjectCardCase;
