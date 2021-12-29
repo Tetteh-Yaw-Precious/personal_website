@@ -54,7 +54,7 @@ const Work = () => {
             }
             projectName="GoldYardRecords 2.0"
             projectCat="Music label Webapp (ux study)"
-            techused="Figma | Ai | html | scss | Javascript "
+            techused="Figma | html | scss | Js "
           />
           <BrandIdentity
             designtype={behance}
@@ -63,7 +63,7 @@ const Work = () => {
             }
             projectName="Seguah Bookswap"
             projectCat="Seguah Bookswap Brand design"
-            techused="Figma | Ai | html | scss | Javascript "
+            techused="Figma | Ai | html | scss | Js "
           />
           <Comingsoon
             designtype={behance}
