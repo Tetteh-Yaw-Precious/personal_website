@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../helpers/Mixins";
-import ProjectCard from "./ProjectCard";
 import ProjectCardCase from "./ProjectCardCase";
-import web_dev from "../images/web_dev.svg";
 import github from "../images/githublogo.svg";
 import behance from "../images/behance.svg";
 import code from "../images/code.svg";
+import BrandIdentity from "./BrandIdentity";
+import Comingsoon from "./Comingsoon";
 //import Animations
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animations/Pageanimation";
@@ -27,21 +27,21 @@ const Work = () => {
         <motion.h4 variants={titleAnim}>Work</motion.h4>
         <h1>a couple of my projects so far</h1>
         <div className="projects">
-          <ProjectCard
-            techtype={code}
-            worktype={github}
+          <ProjectCardCase
+            worktype={code}
+            gitRepo={github}
+            designtype={behance}
+            path={
+              "https://www.behance.net/gallery/134009815/KTU-school-registration-System-Case-study?"
+            }
+            repolink={
+              "https://github.com/Tetteh-Yaw-Precious/School-Registration-system"
+            }
+            weblink={"https://epic-bardeen-3e74a3.netlify.app/index.html"}
             projectName="School Registration System"
-            projectCat="Web development"
-            techused="html | scss | Javascript | Firebase"
+            projectCat="Registration system for freshers (ux study)"
+            techused="Figma | Ai | html | scss | Javascript | firebase"
           />
-          <ProjectCard
-            techtype={code}
-            worktype={github}
-            projectName="GoldYardRecords 1.0"
-            projectCat="A record label web design case study"
-            techused="html | css"
-          />
-
           <ProjectCardCase
             gitRepo={github}
             worktype={code}
@@ -53,15 +53,29 @@ const Work = () => {
               "https://github.com/Tetteh-Yaw-Precious/GoldYardRecordsUpgrade-master"
             }
             projectName="GoldYardRecords 2.0"
-            projectCat="Web development"
-            techused="html | scss | Javascript "
+            projectCat="Music label Webapp (ux study)"
+            techused="Figma | Ai | html | scss | Javascript "
           />
-          <ProjectCard
-            techtype={web_dev}
-            worktype={github}
-            projectName="Acquva Auctions"
-            projectCat="Project Manager"
-            techused="html | scss | Javascript | Firebase"
+          <BrandIdentity
+            designtype={behance}
+            path={
+              "https://www.behance.net/gallery/134010845/Seguah-Bookswap-Brand-style-guide?"
+            }
+            projectName="Seguah Bookswap"
+            projectCat="Seguah Bookswap Brand design"
+            techused="Figma | Ai | html | scss | Javascript "
+          />
+          <Comingsoon
+            designtype={behance}
+            projectName="Seguah Bookswap (webapp)"
+            projectCat="A community of book lovers"
+            techused="Coming Soon"
+          />
+          <Comingsoon
+            designtype={behance}
+            projectName="Mazaryn Social"
+            projectCat="A decentralized social network"
+            techused="Coming Soon"
           />
         </div>
       </motion.div>

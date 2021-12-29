@@ -2,28 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { titleAnim } from "../animations/Pageanimation";
-const ProjectCardCase = ({
-  techtype,
-  worktype,
+const Comingsoon = ({
   projectName,
   projectCat,
   techused,
   designtype,
   path,
-  repolink,
-  gitRepo,
-  weblink
 }) => {
   return (
     <StyledProjectCard variants={titleAnim}>
       <motion.div className="sociallinks" variants={titleAnim}>
-        <a href={weblink} target="_blank" rel="noreferrer">
-          <img src={worktype} alt="type of work" />
-        </a>
-        <a href={repolink} target="_blank" rel="noreferrer">
-          <img src={gitRepo} alt="github profile" />
-        </a>
-
         <a href={path} target="_blank" rel="noreferrer">
           <img src={designtype} alt="case study" />
         </a>
@@ -86,4 +74,4 @@ const StyledProjectCard = styled(motion.div)`
     display: flex;
   }
 `;
-export default ProjectCardCase;
+export default Comingsoon;
