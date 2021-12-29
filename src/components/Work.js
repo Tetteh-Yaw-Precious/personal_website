@@ -65,6 +65,7 @@ const Work = () => {
             projectCat="Seguah Bookswap Brand design"
             techused="Figma | Ai | html | scss | Js "
           />
+
           <Comingsoon
             designtype={behance}
             projectName="Seguah Bookswap (webapp)"
