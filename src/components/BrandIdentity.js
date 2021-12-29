@@ -60,6 +60,9 @@ const StyledProjectCard = styled(motion.div)`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    p{
+      font-size: 1.2rem;
+    }
   }
   .techused {
     align-items: flex-end;

@@ -72,6 +72,7 @@ const StyledLandingpage = styled.div`
       h2 {
         font-size: ${rem(42)};
         font-weight: 600;
+        font-family: "Source Sans Pro", sans-serif;
         span {
           font-size: ${rem(50)};
           color: var(--accent-color);

@@ -40,7 +40,7 @@ const Work = () => {
             weblink={"https://epic-bardeen-3e74a3.netlify.app/index.html"}
             projectName="School Registration System"
             projectCat="Registration system for freshers (ux study)"
-            techused="Figma | Ai | html | scss | Javascript | firebase"
+            techused="Figma | Ai | html | scss | Js | firebase"
           />
           <ProjectCardCase
             gitRepo={github}
@@ -54,7 +54,7 @@ const Work = () => {
             }
             projectName="GoldYardRecords 2.0"
             projectCat="Music label Webapp (ux study)"
-            techused="Figma | Ai | html | scss | Javascript "
+            techused="Figma | Ai | html | scss | Js "
           />
           <BrandIdentity
             designtype={behance}
@@ -63,7 +63,7 @@ const Work = () => {
             }
             projectName="Seguah Bookswap"
             projectCat="Seguah Bookswap Brand design"
-            techused="Figma | Ai | html | scss | Javascript "
+            techused="Figma | Ai | html | scss | Js "
           />
           <Comingsoon
             designtype={behance}
