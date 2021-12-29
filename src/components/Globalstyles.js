@@ -33,7 +33,8 @@ body{
 }
 h1{
   font-size: ${rem(42)};
-  font-weight: 900;
+  font-weight: bolder;
+  font-family: "Source Sans Pro", sans-serif;
 }
 h2{
   font-size: ${rem(25)};
@@ -52,9 +53,7 @@ h4{
   padding: 0 2rem 0.5rem 0;
 }
 p{
-  font-size: 1.6rem;
-  line-height: 190%;
-  font-weight: 500;
+
   color: #3d3d3d;
   font-family: 'Open sans', sans-serif;
 }

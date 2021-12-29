@@ -36,7 +36,7 @@ const Landingpage = ({ navStatus, setnavStatus }) => {
             Hi, I am <span>Yaw Precious</span>
           </motion.h2>
           <motion.p variants={fade}>
-            a self-taught frontend Engineer from Ghana
+            a self-taught frontend Developer & Ui/Ux Designer from Ghana
           </motion.p>
           <motion.button variants={fade}>
             <Link to="worky" spy={true} smooth={true} className="link">
@@ -76,12 +76,13 @@ const StyledLandingpage = styled.div`
           font-size: ${rem(50)};
           color: var(--accent-color);
           font-weight: 700;
+          font-family: "Source Sans Pro", sans-serif;
         }
       }
       p {
         font-size: ${rem(30)};
         text-align: center;
-        font-weight: 500;
+
       }
     }
   }
