@@ -53,9 +53,7 @@ h4{
   padding: 0 2rem 0.5rem 0;
 }
 p{
-  font-size: 1.3rem;
-  line-height: 190%;
-  font-weight: 400;
+
   color: #3d3d3d;
   font-family: 'Open sans', sans-serif;
 }
